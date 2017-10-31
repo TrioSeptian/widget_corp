@@ -1,0 +1,2 @@
+<?
+echo "ini halaman index"
