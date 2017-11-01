@@ -1,14 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang = "en">
-	<head>
-		<title>untitled</title>
-		<link href = "stylesheet/public.css" media ="all" rel = "stylesheet" type= "text/css" />
-	</head>
-	<body>
-		<div id = "header">
-			<h1> Widget Corp </h1>
-		</div>
+<?php require_once("../includes/function.php"); ?>
+<?php include("../includes/layouts/header.php"); ?>
 		<div id= "main">
 			<div id = "navigation">
 				&nbsp;
@@ -23,8 +14,4 @@
 			</ul>
 		</div>
 	</div>
-	<div id = "footer"> Copyright 2017, Widget Corp </div>
-
-</body>
-
-	</html>
+<?php include("../includes/layouts/footer.php"); ?>
