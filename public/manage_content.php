@@ -4,7 +4,7 @@ $dbhost = "localhost";
 $dbuser = "widget_cms";
 $dbpass = "secretpassword";
 $dbname = "widget_corp";
-$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname); // ini kenapa ?
 
 // test konek gak
 if (mysqli_connect_errno()) {
