@@ -1,10 +1,11 @@
 <?php
 //1. buat koneksi
-$dbhost = "localhost";
-$dbuser = "widget_cms";
-$dbpass = "secretpassword";
+/*$dbhost = "localhost";
+$dbuser = "";
+$dbpass = "";
 $dbname = "widget_corp";
-$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname); // ini kenapa ?
+$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);*/
+$db = mysqli_connect("localhost","root","","widget_corp");
 
 // test konek gak
 if (mysqli_connect_errno()) {
@@ -16,15 +17,17 @@ if (mysqli_connect_errno()) {
 <?php require_once("../includes/function.php"); ?>
 <?php
  // 2. pilih query
- $query = "SELECT * ";
+ /*$query = "SELECT * ";
  $query = "FROM subjects ";
  $query = "ORDER BY position ASC";
- $result = mysqli_query($connection, $query);
+ $result = mysqli_query($db, $query);
 
  // test eror tidak
   if (!$result){
   	die ("database query gagal");
-  }
+  }*/
+  $query = "SELECT * FROM subjects ORDER BY position ASC";
+   $result = mysqli_query($db, $query);
   ?>
 <?php include("../includes/layouts/header.php"); ?>
 		<div id= "main">
@@ -56,5 +59,5 @@ if (mysqli_connect_errno()) {
 <?php include("../includes/layouts/footer.php"); ?>
 <?php
  // 5. close connection
-mysqli_close($connection);
+mysqli_close($db);
 ?>
